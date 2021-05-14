@@ -2,9 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import App from '../views/App.vue'
-import home from '../views/home.vue'
-import manage from '../views/manage.vue'
-import about from '../views/about.vue'
+import Home from '../views/Home.vue'
+import Manage from '../views/Manage.vue'
+import About from '../views/About.vue'
 
 Vue.use(VueRouter)
 
@@ -18,17 +18,17 @@ const routes = [
   {
     path:'/home',
     name:'home',
-    component:home
+    component:Home
   },
   {
     path: '/manage',
     name:'manage',
-    component:manage
+    component:Manage
   },
   {
     path:'/about',
     name:'about',
-    component:about
+    component:About
   }
 ]
 
