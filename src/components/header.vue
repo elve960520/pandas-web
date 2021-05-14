@@ -22,8 +22,19 @@
             </el-menu>
             <el-col class="head-mid"></el-col>
             <el-col class="head-right">
-                <div class="avater-area"><el-avatar :size="40" :src="circleUrl" class="avatar-image"></el-avatar></div>
+                <el-dropdown>
+                    <div class="avater-area">
+                        <el-avatar :size="40" :src="circleUrl" class="avatar-image el-dropdown-link"></el-avatar>
+                    </div>
+                    <el-dropdown-menu slot="dropdown">
+                        <el-dropdown-item>个人中心</el-dropdown-item>
+                        <el-dropdown-item>写博客</el-dropdown-item>
+                        <el-dropdown-item>写随笔</el-dropdown-item>
+                        <el-dropdown-item divided>退出</el-dropdown-item>
+                    </el-dropdown-menu>
+                </el-dropdown>
             </el-col>
+
         </el-row>
     </main>
 </div>
@@ -40,9 +51,9 @@ export default {
     data() {
         return {
             url: require('../assets/logo.png'),
-            category:["后端","前端","运维","大数据","机器学习"],
-            tags:["C/C++","Java","Js","Golang"],
-            circleUrl:"https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+            category: ["后端", "前端", "运维", "大数据", "机器学习"],
+            tags: ["C/C++", "Java", "Js", "Golang"],
+            circleUrl: "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
         };
     },
 };
@@ -85,13 +96,13 @@ export default {
     height: 60px;
 }
 
-.avater-area{
+.avater-area {
     height: 60px;
     width: 40px;
-    
 }
 
-.avatar-image{
+.avatar-image {
     margin-top: 10px;
+    cursor: pointer;
 }
 </style>
